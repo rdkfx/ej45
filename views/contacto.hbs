@@ -1,0 +1,61 @@
+<html>
+<head>
+  <link rel='stylesheet', href='/stylesheets/style.css' />
+  <link rel='stylesheet', href='/stylesheets/bootstrap.min.css' />
+</head>
+<body>
+  <p class="t1">Envianos tu mensaje</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/">Inicio</a>
+      </div>
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/servicios">Servicios</a>
+      </div>
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/historia">Historia</a>
+      </div>
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/verfotos">Galeria</a>
+      </div>
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/about">About</a>
+      </div>
+      <div class="col-xs-2 col-md-2 col-xl-2 col-lg-2 t2">
+        <a href="http://localhost:3000/contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-xl-4 col-lg-4" style="margin-top:200px">
+         <form method="get" id="form1"  enctype="multipart/form-data">
+         Inserte Asunto
+         <input type="text" name="asunto" id="txt1">
+         <br />
+         Inserte Mensaje
+         <textarea cols="40", rows="10" name="mensaje" id="txt2"></textarea>
+         <br />
+         <input type="submit" value="Enviar Mensaje" onclick="texto()">
+         </form>
+         <p id="p1" hidden >Asunto: </p>
+         <p id="p2" hidden >Mensaje: </p>
+      </div>
+      <div class="col-xs-12 col-md-6 col-xl-6 col-lg-6">
+        <img src="images/cartero.jpeg"  alt="cartero" class="img-fluid" style="margin-top:100px;"/>
+      </div>
+      <script>
+          function texto() {
+            form1.hidden();
+           var asunto=document.getElementById('txt1').value;
+           var msj=document.getElementById('txt2').value;
+           document.getElementById("p1").innerHTML("Mensaje: "+asunto).visible;
+            document.getElementById("p2").innerHTML("Mensaje: "+asunto).visible;
+          }
+      </script>
+
+    </div>
+  </div>
+</body>
+</html>
